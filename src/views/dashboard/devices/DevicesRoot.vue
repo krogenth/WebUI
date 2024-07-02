@@ -131,7 +131,7 @@ export default {
               timerInterval = setInterval(() => {
                 const left = this.$swal.getTimerLeft();
                 const minutes = Math.floor(left / 1000 / 60);
-                b.textContent = `${minutes}:${Math.floor(left / 1000 - minutes * 60)}`;
+                b.textContent = `${minutes}:${String(Math.floor(left / 1000 - minutes * 60)).padStart(2, '0')}`;
               }, 1000)
             },
             willClose: () => {
